@@ -1,0 +1,9 @@
+experiment_id,timestamp,name,model_type,hidden_size,learning_rate,optimizer,batch_size,epochs,seed,final_accuracy,best_accuracy,per_epoch_accuracy,training_time_sec,device,checkpoint,notes
+baseline_fc_128_adam_0.001,2026-10-14 22:05:38,baseline_fc_128_adam_0.001,fc,128,0.001,adam,64,5,42,0.9751,0.9751,0.9439;0.962;0.9642;0.9729;0.9751,29.46,cpu,checkpoints/baseline_fc_128_adam_0.001.pt,基线：全连接 + 128 隐藏层 + Adam
+fc_hidden_256,2026-10-14 22:06:14,fc_hidden_256,fc,256,0.001,adam,64,5,42,0.9792,0.9792,0.9529;0.9688;0.9768;0.9761;0.9792,35.97,cpu,checkpoints/fc_hidden_256.pt,隐藏层从 128 改到 256
+fc_hidden_64,2026-10-14 22:06:56,fc_hidden_64,fc,64,0.001,adam,64,5,42,0.9709,0.9709,0.9405;0.9525;0.9609;0.9666;0.9709,42.17,cpu,checkpoints/fc_hidden_64.pt,隐藏层从 128 改到 64
+fc_lr_0.01,2026-10-14 22:07:36,fc_lr_0.01,fc,128,0.01,adam,64,5,42,0.9618,0.9674,0.9564;0.9608;0.9658;0.9674;0.9618,39.13,cpu,checkpoints/fc_lr_0.01.pt,学习率 0.001 -> 0.01
+fc_lr_0.0001,2026-10-14 22:08:09,fc_lr_0.0001,fc,128,0.0001,adam,64,5,42,0.9324,0.9324,0.8942;0.9128;0.9192;0.9272;0.9324,33.5,cpu,checkpoints/fc_lr_0.0001.pt,学习率 0.001 -> 0.0001
+fc_sgd,2026-10-14 22:08:35,fc_sgd,fc,128,0.01,sgd,64,5,42,0.9132,0.9132,0.8613;0.8927;0.9016;0.9093;0.9132,26.01,cpu,checkpoints/fc_sgd.pt,Adam 换成 SGD（学习率调大）
+fc_deep_256,2026-10-14 22:09:10,fc_deep_256,fc_deep,256,0.001,adam,64,5,42,0.9764,0.9798,0.9617;0.971;0.9727;0.9798;0.9764,35.11,cpu,checkpoints/fc_deep_256.pt,两层隐藏层的全连接
+cnn_baseline,2026-10-14 22:10:55,cnn_baseline,cnn,128,0.001,adam,64,5,42,0.9898,0.9902,0.9807;0.987;0.9902;0.9885;0.9898,104.56,cpu,checkpoints/cnn_baseline.pt,换成 CNN，准确率应该更高
